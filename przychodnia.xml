@@ -1,0 +1,59 @@
+<przychodnia>
+    <pacjenci>
+        <pacjent plec="M" id="1">
+            <imie>Adam</imie>
+            <nazwisko>Niewiadomski</nazwisko>
+            <wiek>21</wiek>
+            <pesel>98020203176</pesel>
+        </pacjent>
+
+        <pacjent plec="K" id="2">
+            <imie>Natalia</imie>
+            <nazwisko>Szymborska</nazwisko>
+            <wiek>24</wiek>
+            <pesel>95030102230</pesel>
+        </pacjent>
+
+        <pacjent plec="K" id="3">
+            <imie>Joanna</imie>
+            <nazwisko>Miła</nazwisko>
+            <wiek>27</wiek>
+            <pesel>92040104829</pesel>
+        </pacjent>
+    </pacjenci>
+
+    <lekarze>
+        <lekarz plec="K" id="4" specjalizacja="pediatra">
+            <imie>Weronika</imie>
+            <nazwisko>Kowalska</nazwisko>
+        </lekarz>
+
+        <lekarz plec="M" id="5" specjalizacja="laryngolog">
+            <imie>Andrzej</imie>
+            <nazwisko>Iksiński</nazwisko>
+        </lekarz>
+    </lekarze>
+
+    <wizyty>
+        <wizyta pokoj="1">
+            <data_wizyty>22.02.2005</data_wizyty>
+            <godzina_wizyty>10:00</godzina_wizyty>
+            <id_lekarza>4</id_lekarza>
+            <id_pacjenta>1</id_pacjenta>
+        </wizyta>
+
+        <wizyta pokoj="1">
+            <data_wizyty>11.07.2006</data_wizyty>
+            <godzina_wizyty>12:00</godzina_wizyty>
+            <id_lekarza>5</id_lekarza>
+            <id_pacjenta>2</id_pacjenta>
+        </wizyta>
+
+        <wizyta pokoj="2">
+            <data_wizyty>13.07.2006</data_wizyty>
+            <godzina_wizyty>13:00</godzina_wizyty>
+            <id_lekarza>5</id_lekarza>
+            <id_pacjenta>3</id_pacjenta>
+        </wizyta>
+    </wizyty>
+</przychodnia>
