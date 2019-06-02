@@ -1,3 +1,5 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet type="text/css" href="style.css" ?> 
 <przychodnia>
     <pacjenci>
         <pacjent plec="M" id="1">
@@ -35,25 +37,22 @@
     </lekarze>
 
     <wizyty>
-        <wizyta pokoj="1">
+        <wizyta id_lekarza="4" id_pacjenta="1">
             <data_wizyty>22.02.2005</data_wizyty>
             <godzina_wizyty>10:00</godzina_wizyty>
-            <id_lekarza>4</id_lekarza>
-            <id_pacjenta>1</id_pacjenta>
+            <nr_pokoju>1</nr_pokoju>
         </wizyta>
 
-        <wizyta pokoj="1">
+        <wizyta id_lekarza="5" id_pacjenta="2">
             <data_wizyty>11.07.2006</data_wizyty>
             <godzina_wizyty>12:00</godzina_wizyty>
-            <id_lekarza>5</id_lekarza>
-            <id_pacjenta>2</id_pacjenta>
+            <nr_pokoju>1</nr_pokoju>
         </wizyta>
 
-        <wizyta pokoj="2">
+        <wizyta id_lekarza="5" id_pacjenta="3">
             <data_wizyty>13.07.2006</data_wizyty>
             <godzina_wizyty>13:00</godzina_wizyty>
-            <id_lekarza>5</id_lekarza>
-            <id_pacjenta>3</id_pacjenta>
+            <nr_pokoju>2</nr_pokoju>
         </wizyta>
     </wizyty>
 </przychodnia>

@@ -1,0 +1,114 @@
+pacjenci {
+    display: inline-block;
+    border-style: block;
+    border: 5px solid;
+    border-color: #990011;
+    padding: 10px;
+    background-color: #303030;
+    color: #fff;
+    margin: 20px;
+}
+
+pacjent {
+    display: block;
+    padding: 10px;
+    margin: 10px;
+    background-color: #505050;
+}
+
+pacjent[plec="K"] > nazwisko:after{
+    content: url("https://inf.ug.edu.pl/~lmielewczyk/teaching/ss/proj-jez-xml/lab/files/oznaczenieKobieta.png");
+}
+
+pacjent[plec="M"] > nazwisko:after{
+    content: url("https://inf.ug.edu.pl/~lmielewczyk/teaching/ss/proj-jez-xml/lab/files/oznaczenieMezczyzna.png");
+}
+
+lekarze {
+    display: inline-block;
+    background-color: aqua;
+    border-style: block;
+    border: 5px solid;
+    border-color: bisque;
+    padding: 10px;
+    margin: 20px;
+}
+
+lekarz {
+    display: block;
+    background-color: aquamarine;
+    padding: 10px;
+    margin: 10px;
+}
+
+lekarz > nazwisko:after{
+    content: url("https://img.scoop.it/Kcd7VVJGFKFX2bnEHZNJizl72eJkfbmt4t8yenImKBVvK0kTmF0xjctABnaLJIm9");
+}
+
+wizyty {
+    display: inline-block;
+    border-style: block;
+    border: 10px dotted;
+    border-color: #bae5f7;
+    padding: 10px;
+    background-color: #0c6791;
+    color: #fff;
+    margin: 20px;
+    counter-reset: section;
+    
+}
+
+wizyta {
+    display: block;
+    padding: 10px;
+    margin: 10px;
+    background-color: #083d53;
+    counter-increment: section;
+}
+
+data_wizyty {
+    display: block;
+}
+
+godzina_wizyty {
+    display: block;
+    font-size: 10px;
+}
+
+data_wizyty::before {
+    content: "Wizyta " counter(section) ": ";
+}
+
+godzina_wizyty::before {
+    content: "Godzina: ";
+}
+
+nr_pokoju::before {
+    content: "Pokoj: ";
+}
+
+nr_pokoju {
+    font-size: 10px;
+}
+
+wiek {
+    display: block;
+}
+
+pesel::before {
+    content: "PESEL: ";
+}
+
+wiek::before {
+    content: "Wiek: "
+}
+
+pacjent[plec="K"]:hover {
+    background-color: pink;
+    color: black;
+}
+
+pacjent[plec="M"]:hover {
+    background-color: cyan;
+    color: black;
+}
