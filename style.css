@@ -16,11 +16,11 @@ pacjent {
     background-color: #505050;
 }
 
-pacjent[plec="K"] > nazwisko:after{
+pacjent[plec="K"] > nazwisko:after {
     content: url("https://inf.ug.edu.pl/~lmielewczyk/teaching/ss/proj-jez-xml/lab/files/oznaczenieKobieta.png");
 }
 
-pacjent[plec="M"] > nazwisko:after{
+pacjent[plec="M"] > nazwisko:after {
     content: url("https://inf.ug.edu.pl/~lmielewczyk/teaching/ss/proj-jez-xml/lab/files/oznaczenieMezczyzna.png");
 }
 
@@ -36,12 +36,19 @@ lekarze {
 
 lekarz {
     display: block;
-    background-color: aquamarine;
     padding: 10px;
     margin: 10px;
 }
 
-lekarz > nazwisko:after{
+lekarz[specjalizacja="pediatra"] {
+    background-color: aquamarine;
+}
+
+lekarz[specjalizacja="laryngolog"] {
+    background-color: cadetblue;
+}
+
+lekarz > nazwisko:after {
     content: url("https://img.scoop.it/Kcd7VVJGFKFX2bnEHZNJizl72eJkfbmt4t8yenImKBVvK0kTmF0xjctABnaLJIm9");
 }
 
