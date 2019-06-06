@@ -1,4 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE przychodnia SYSTEM "schema.dtd">
 <?xml-stylesheet type="text/css" href="style.css" ?> 
 <przychodnia>
     <pacjenci>
@@ -37,22 +38,43 @@
     </lekarze>
 
     <wizyty>
-        <wizyta id_lekarza="4" id_pacjenta="1">
+        <wizyta>
             <data_wizyty>22.02.2005</data_wizyty>
             <godzina_wizyty>10:00</godzina_wizyty>
             <nr_pokoju>1</nr_pokoju>
         </wizyta>
 
-        <wizyta id_lekarza="5" id_pacjenta="2">
+        <wizyta>
             <data_wizyty>11.07.2006</data_wizyty>
             <godzina_wizyty>12:00</godzina_wizyty>
             <nr_pokoju>1</nr_pokoju>
         </wizyta>
 
-        <wizyta id_lekarza="5" id_pacjenta="3">
+        <wizyta>
             <data_wizyty>13.07.2006</data_wizyty>
             <godzina_wizyty>13:00</godzina_wizyty>
             <nr_pokoju>2</nr_pokoju>
         </wizyta>
     </wizyty>
+
+    <recepty>
+        <recepta>
+            <lek>Paracetamol</lek>
+            <lek>Witamina C</lek>
+            <refundacja/>
+        </recepta>
+
+        <recepta>
+            <lek>Strepsils</lek>
+            <lek>Gripex</lek>
+        </recepta>
+
+        <recepta>
+            <lek>Rutinoscorbin</lek>
+            <lek>Augumentin</lek>
+            <lek>Pyralgina</lek>
+            <lek>Melisa</lek>
+            <refundacja/>
+        </recepta>
+    </recepty>
 </przychodnia>
