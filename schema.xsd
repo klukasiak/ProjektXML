@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="przychodnia" type="typPrzychodnia"/>
+    <xsd:attribute name="plec" type="typPlec"/>
+    <xsd:attribute name="id" type="xsd:positiveInteger"/>
+
+    <xsd:group name="dane">
+        <xsd:sequence>
+            <xsd:element name="imie" type="typImie"/>
+		    <xsd:element name="nazwisko" type="typUnia"/>
+        </xsd:sequence>
+    </xsd:group>
+
+    <xsd:complexType name="typPacjenci">
+        <xsd:sequence>
+            <xsd:element name="pacjent" type="typPacjent" minOccurs="1" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="typPacjent">
+        <xsd:sequence>
+            <xsd:group ref="dane"/>
+            <xsd:element name="wiek" type="typWiek"/>
+            <xsd:element name="pesel" type="typPesel"/>
+        </xsd:sequence>
+        <xsd:attribute ref="plec" use="required"/>
+        <xsd:attribute ref="id" use="required"/>
+    </xsd:complexType>
+
+    <xsd:complexType name="typLekarz">
+        <xsd:group ref="dane"/>
+        <xsd:attribute ref="plec" use="required"/>
+        <xsd:attribute ref="id" use="required"/>
+        <xsd:attribute name="specjalizacja" type="xsd:string" use="optional"/>
+    </xsd:complexType>
+
+    <xsd:complexType name="typLekarze">
+        <xsd:sequence>
+            <xsd:element name="lekarz" type="typLekarz" minOccurs="1" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="typWizyta">
+        <xsd:sequence>
+            <xsd:element type="xsd:date" name="data_wizyty"/>
+            <xsd:element type="xsd:time" name="godzina_wizyty"/>
+            <xsd:element type="xsd:unsignedInt" name="nr_pokoju"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="typWizyty">
+        <xsd:sequence>
+            <xsd:element name="wizyta" type="typWizyta" minOccurs="1" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="typRecepta">
+        <xsd:sequence>
+            <xsd:element type="xsd:string" name="lek" maxOccurs="unbounded" minOccurs="0"/>
+            <xsd:element type="xsd:string" name="refundacja" minOccurs="0" maxOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="typRecepty">
+        <xsd:sequence>
+            <xsd:element name="recepta" type="typRecepta" minOccurs="1" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="typPrzychodnia">
+        <xsd:sequence>
+            <xsd:element name="pacjenci" type="typPacjenci" minOccurs="1" maxOccurs="1"/>
+            <xsd:element name="lekarze" type="typLekarze" minOccurs="1" maxOccurs="1"/>
+            <xsd:element name="wizyty" type="typWizyty" minOccurs="1" maxOccurs="1"/>
+            <xsd:element name="recepty" type="typRecepty" minOccurs="1" maxOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:simpleType name="typPesel">
+        <xsd:restriction base="xsd:string">
+            <xsd:length value="11"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="typPlec">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="M"/>
+            <xsd:enumeration value="K"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="typWiek">
+        <xsd:restriction base="xsd:unsignedShort">
+            <xsd:minInclusive value="1" />
+            <xsd:maxInclusive value="110" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="typImie">
+        <xsd:list itemType="xsd:string" />
+    </xsd:simpleType>
+
+    <xsd:simpleType name="typNazwisko">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[A-Z][a-z]+" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="typUnia">
+        <xsd:union memberTypes="typImie typNazwisko" />
+    </xsd:simpleType>
+
+</xsd:schema>

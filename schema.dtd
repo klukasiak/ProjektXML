@@ -1,6 +1,6 @@
 <!ENTITY % pcd "(#PCDATA)">
 <!ENTITY % doc "lekarz">
-<!ELEMENT przychodnia (pacjenci, lekarze, wizyty)>
+<!ELEMENT przychodnia (pacjenci, lekarze, wizyty, recepty)>
 <!ELEMENT pacjenci (pacjent, pacjent*)>
 <!ELEMENT lekarze (%doc;, %doc;*)>
 <!ELEMENT wizyty (wizyta, wizyta*)>
@@ -19,3 +19,5 @@
 <!ATTLIST %doc; id ID #REQUIRED>
 <!ATTLIST pacjent id ID #REQUIRED>
 <!ATTLIST %doc; specjalizacja NMTOKEN #IMPLIED>
+<!ATTLIST przychodnia xmlns:xsi NMTOKEN #REQUIRED>
+<!ATTLIST przychodnia xsi:noNamespaceSchemaLocation NMTOKEN #REQUIRED>

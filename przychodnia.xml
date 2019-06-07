@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE przychodnia SYSTEM "schema.dtd">
 <?xml-stylesheet type="text/css" href="style.css" ?> 
-<przychodnia>
+<przychodnia xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
     <pacjenci>
         <pacjent plec="M" id="1">
-            <imie>Adam</imie>
+            <imie>Adam Kazimierz</imie>
             <nazwisko>Niewiadomski</nazwisko>
             <wiek>21</wiek>
             <pesel>98020203176</pesel>
@@ -39,20 +39,20 @@
 
     <wizyty>
         <wizyta>
-            <data_wizyty>22.02.2005</data_wizyty>
-            <godzina_wizyty>10:00</godzina_wizyty>
+            <data_wizyty>2005-02-22</data_wizyty>
+            <godzina_wizyty>10:00:00</godzina_wizyty>
             <nr_pokoju>1</nr_pokoju>
         </wizyta>
 
         <wizyta>
-            <data_wizyty>11.07.2006</data_wizyty>
-            <godzina_wizyty>12:00</godzina_wizyty>
+            <data_wizyty>2006-07-04</data_wizyty>
+            <godzina_wizyty>12:00:00</godzina_wizyty>
             <nr_pokoju>1</nr_pokoju>
         </wizyta>
 
         <wizyta>
-            <data_wizyty>13.07.2006</data_wizyty>
-            <godzina_wizyty>13:00</godzina_wizyty>
+            <data_wizyty>2006-07-13</data_wizyty>
+            <godzina_wizyty>13:00:00</godzina_wizyty>
             <nr_pokoju>2</nr_pokoju>
         </wizyta>
     </wizyty>
