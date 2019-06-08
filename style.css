@@ -119,3 +119,14 @@ pacjent[plec="M"]:hover {
     background-color: cyan;
     color: black;
 }
+
+recepty {
+    display: table;
+}
+
+lek {
+    display: table-cell;
+    border: 1px solid;
+    padding: 5px;
+    margin: 5px;
+}
