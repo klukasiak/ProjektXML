@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet type="text/css" href="style.css" ?> 
+<przychodnia>
+    <pacjenci>
+        <pacjent plec="M" id="1">
+            <imie>Adam Kazimierz</imie>
+            <nazwisko>Niewiadomski</nazwisko>
+            <wiek>21</wiek>
+            <pesel>98020203176</pesel>
+        </pacjent>
+
+        <pacjent plec="K" id="2">
+            <imie>Natalia</imie>
+            <nazwisko>Szymborska</nazwisko>
+            <wiek>24</wiek>
+            <pesel>95030102230</pesel>
+        </pacjent>
+
+        <pacjent plec="K" id="3">
+            <imie>Joanna</imie>
+            <nazwisko>Miła</nazwisko>
+            <wiek>27</wiek>
+            <pesel>92040104829</pesel>
+        </pacjent>
+    </pacjenci>
+
+    <lekarze>
+        <lekarz plec="K" id="4" specjalizacja="pediatra">
+            <imie>Weronika</imie>
+            <nazwisko>Kowalska</nazwisko>
+        </lekarz>
+
+        <lekarz plec="M" id="5" specjalizacja="laryngolog">
+            <imie>Andrzej</imie>
+            <nazwisko>Iksiński</nazwisko>
+        </lekarz>
+    </lekarze>
+
+    <wizyty>
+        <wizyta>
+            <data_wizyty>2007-02-22</data_wizyty>
+            <godzina_wizyty>10:00:00</godzina_wizyty>
+            <nr_pokoju>1</nr_pokoju>
+        </wizyta>
+
+        <wizyta>
+            <data_wizyty>2006-07-04</data_wizyty>
+            <godzina_wizyty>12:00:00</godzina_wizyty>
+            <nr_pokoju>1</nr_pokoju>
+        </wizyta>
+
+        <wizyta>
+            <data_wizyty>2006-07-13</data_wizyty>
+            <godzina_wizyty>13:00:00</godzina_wizyty>
+            <nr_pokoju>2</nr_pokoju>
+        </wizyta>
+    </wizyty>
+
+    <recepty>
+        <recepta>
+            <lek>Paracetamol</lek>
+            <lek>Witamina C</lek>
+            <refundacja/>
+        </recepta>
+
+        <recepta>
+            <lek>Strepsils</lek>
+            <lek>Gripex</lek>
+        </recepta>
+
+        <recepta>
+            <lek>Rutinoscorbin</lek>
+            <lek>Augumentin</lek>
+            <lek>Pyralgina</lek>
+            <lek>Melisa</lek>
+            <refundacja/>
+        </recepta>
+    </recepty>
+</przychodnia>

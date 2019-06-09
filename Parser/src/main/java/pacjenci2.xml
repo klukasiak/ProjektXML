@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<pacjenci>
+    <pacjent plec=":)">
+        <imie>Jakies Imie :D</imie>
+        <nazwisko>Jakies Nazwisko :)</nazwisko>
+        <wiek>21</wiek>
+        <pesel>98020203176</pesel>
+    </pacjent>
+    <pacjent plec="K">
+        <imie>Natalia</imie>
+        <nazwisko>Szymborska</nazwisko>
+        <wiek>24</wiek>
+        <pesel>95030102230</pesel>
+    </pacjent>
+    <pacjent plec="K">
+        <imie>Joanna</imie>
+        <nazwisko>Miła</nazwisko>
+        <wiek>27</wiek>
+        <pesel>92040104829</pesel>
+    </pacjent>
+</pacjenci>
