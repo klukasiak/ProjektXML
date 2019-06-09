@@ -129,4 +129,15 @@ lek {
     border: 1px solid;
     padding: 5px;
     margin: 5px;
+    animation-name: tableanim;
+    animation-duration: 10s;
+    position: relative;
 }
+
+@keyframes tableanim {
+    0%   {background-color: aquamarine; left: 0px; top:0px;}
+    25%  {background-color: bisque; left: 50px; top:0px;}
+    50%  {background-color: burlywood; left: 50px; top:50px;}
+    100% {background-color: darksalmon; left: 0px; top:50px;}
+}
+
